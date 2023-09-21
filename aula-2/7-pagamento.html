@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calcula PAGAMENTO</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Calcula Troco</h1>
+
+            <p>Informe os dados abaixo para calcular seu PAGAMENTO</p>
+
+            <label for="txt1">Nome:</label><input type="text" id="txt1">
+
+            <label for="num1">Valor pago por hora:</label><input type="number" id="num1">
+
+            <label for="num2">Horas Trabalhadas / Mês:</label><input type="number" id="num2">
+
+            <button onclick="botao_click()">CALCULAR PAGAMENTO</button>
+
+        </div>
+    </div>
+
+        <script>
+
+            function botao_click() {
+
+                var text1 = document.getElementById("txt1").value;
+                var nome = (text1);
+                var numero1 = document.getElementById("num1").value;
+                var valorPago = parseFloat(numero1);
+                var numero2 = document.getElementById("num2").value;
+                var horas = parseInt(numero2);
+                document.write("O valor do pagamento de " + nome + " é de R$ " + (horas * valorPago).toFixed(2), "<br/>", "Tendo em vista que o valor pago por hora é de R$ " + valorPago.toFixed(2) + " e você trabalhou " + horas + " horas no mês.");
+            }
+
+        </script>
+
+</body>
+</html>

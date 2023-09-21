@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calcula Consumo Médio</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Calcula Consumo</h1>
+
+            <p>Informe os dados para calcular o consumo médio de combustível de um veículo</p>
+
+            <label for="txt1">Distância total em (Km):</label><input type="number" id="num1">
+
+            <label for="txt2">Total combustível abastecido (Litros):</label><input type="number" id="num2">
+
+            <button onclick="botao_click()">CONSUMO (Km por Litro)</button>
+
+        </div>
+    </div>
+
+        <script>
+
+            function botao_click() {
+
+                var km = document.getElementById("num1").value;
+                var distancia = parseInt(km);
+                var litros = document.getElementById("num2").value;
+                var combustivel = parseFloat(litros);
+                alert("O consumo médio de combustível de seu veículo é de " + (distancia / combustivel) + " Km por litro.");
+            }
+
+        </script>
+
+</body>
+</html>
